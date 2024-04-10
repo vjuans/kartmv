@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<link rel = "icon" type = "image/jpg" href = "-------------------------">
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+		
+    	<!-- Meta tags Obrigatórias -->
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">	
+
+    	<title>Bem-Vindo ao KartMV</title>
+  	</head>
+    <body>
+      <!--Login-->
+        <script>
+            function entrar() {
+                window.open("home.html", "_self")
+            }
+
+            function login() {
+                
+                var usuario = document.getElementById("usuario").value;
+                var senha = document.getElementById("senha").value;
+                
+                if (usuario === "kart" && senha === "kart123") {
+                    alert("Login efetuado com êxito!");
+                    entrar();
+                }
+                else {
+                    alert("Usuário ou Senha Inválidos.");
+                }
+            }
+            function dados() {
+                alert("Usuário: kart \nSenha: kart123");
+                user.focus();
+            }
+        </script>
+
+      <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+      
+      <!--Menu-->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">KartMV</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(Página atual)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aviso.html">Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aviso.html">Serviços</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Estatísticas
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="aviso.html">Volta mais rápida</a>
+                <a class="dropdown-item" href="aviso.html">Preço por hora</a>
+                <a class="dropdown-item" href="aviso.html">Combustível gasto</a>
+                <a class="dropdown-item" href="aviso.html">Requisitos mínimos</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aviso.html">Contato</a>
+            </li>
+          </ul>
+        </div>
+        <form >
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">
+            Login
+          </button>
+          <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Fazer Login</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form class="row g-3">
+                    <div class="cold-md-4">
+                        <label for="usuario" class="form-label">Digite seu Nome de Usuário</label>
+                        <input type="text" class="form-control" id="usuario" name="usuario" value="" required>
+                    </div>
+                    <div class="cold-md-4">
+                        <label for="senha" class="form-label">Digite sua Senha</label>
+                        <input type="password" class="form-control" id="senha" name="senha" value="" required autofocus>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                  <button type="button" class="btn btn-secondary" onclick="dados()">Dados</button>
+                  <button type="button" class="btn btn-primary" onclick="login()">Entrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </nav> 
+      
+
+      <!--Carrossel-->
+      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="img/kart1.jpg" alt="Primeiro Slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="img/kart2.jpg" alt="Segundo Slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="img/kart3.jpg" alt="Terceiro Slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="img/kart4.jpg" alt="Terceiro Slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="img/kart5.jpg" alt="Terceiro Slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Próximo</span>
+        </a>
+      </div>
+
+      <div class="card text-center">
+        <div class="card-header">
+          Bem-Vindo ao Kartódromo KartMV
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">A ADRENALINA QUE NOVA ODESSA MERECE</h5>
+          <p id="card-text1" class="card-text">Viva a emoção de pilotar os melhores karts</p>
+          <a href="aviso.html" class="btn btn-primary">Ver mais</a>
+        </div>
+        <div class="card-footer text-muted">
+          
+        </div>
+      </div>
+    </body>
+</html>
+          
