@@ -23,9 +23,10 @@
 
 .texto3 {
   font-weight: bold;
-  font-size: 50px;
+  font-size: 60px;
   margin: 5%;
   text-align: center;
+  text-shadow: 4px 4px #F2A413;
 }
 
 .requisitos {
@@ -136,12 +137,12 @@ input[type=reset]:hover {
 
 #div-form {
   border-radius: 5px;
-  background-color: #1d1d2e;
+  background-color: #e9ecef;
   padding: 40px;
   margin: auto;
   margin-top: 30px; 
   margin-bottom: 30px; 
-  width: 50%;
+  width: 70%;
 }
 
 input[type=text] {
@@ -155,7 +156,7 @@ input[type=text] {
 }
 
 .formtxt {
-  color: #ccc;
+  color: #101026;
 }
 
 textarea {
@@ -168,4 +169,30 @@ textarea {
   background-color: #f8f8f8;
   font-size: 16px;
   resize: none;
+}
+
+.card-group {
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.card-group:hover {
+  border: 1px #F2A413 ;
+}
+
+.banner {
+  width: 35%;
+  margin: auto;
+  display: block;
+  margin-top: 0px;
+  margin-bottom: 5%;
+  
+}
+
+.jumbotron-fluid {
+  margin: 5%;
+}
+
+.lead {
+  text-align: justify;
 }
