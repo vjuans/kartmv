@@ -8,25 +8,40 @@
 .texto1 {
   color: #fff;
   text-align: center;
-  margin: 5%;
+  margin-top: 5%;
+
+}
+
+.texto1_2 {
+  color: #fff;
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: 5%;
 
 }
 
 .texto2 {
   color: #fff;
-  font-size: 15px;
+  font-size: 20px;
   text-align: justify;
-  margin-left: 20%;
-  margin-right: 20%;
-  margin-bottom: 5%;
+  margin: auto;
+  padding: 4%;
+  width: 100%;
 }
 
 .texto3 {
   font-weight: bold;
   font-size: 60px;
-  margin: 5%;
+  margin-bottom: 5%;
   text-align: center;
   text-shadow: 4px 4px #F2A413;
+}
+
+.texto4 {
+  font-size: 20px;
+  margin-top: 5%;
+  text-align: center;
+  color: #F2A413;
 }
 
 .requisitos {
@@ -195,4 +210,14 @@ textarea {
 
 .lead {
   text-align: justify;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-attachment: fixed;
+}
+
+.icon1 {
+  width: 70%;
 }
