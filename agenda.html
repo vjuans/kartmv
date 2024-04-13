@@ -15,6 +15,19 @@
     	<title>Agendar corrida ou aula</title>
   	</head>
     <body>
+      <script language="JavaScript">
+        function operacao(){
+            var a = eval(document.formed.t1.value);
+            var b = eval(document.formed.t2.value);
+            var c = a / b;
+            if (c = 1 ) {
+              alert("A média de tempo gasto por volta é de 1 minuto");
+            }
+            else{
+              alert("A média de tempo gasto por volta é de: " + c + "" + "minutos");
+            }
+        }
+    </script>    
       <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -53,6 +66,19 @@
           </ul>
         </div>
         </nav>
+
+        <!--Formulário-->
+        <form name="formed">
+          <center>
+              <h3>Cálculo em JavaScript</h3>
+              Digite o primeiro Número:<input type="number" name="t1" min="1">
+              <br><br>
+              Digite o segundo Número:<input type="number" name="t2" min="1">
+              <br><br><hr><br><br>
+              <input type="button" name="bt1" value="Calcular" onclick="operacao()">
+              <input type="reset" name="bt2" value="Limpar" onclick="document.formcalc.t1.focus()">
+          </center>
+  
 
         
     </body>
