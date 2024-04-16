@@ -1,85 +1,251 @@
 <!DOCTYPE HTML>
 <html lang="pt-br">
-	<head>
-		<link rel = "icon" type = "image/jpg" href = "img/logo.png">
-		<link rel="stylesheet" type="text/css" href="estilo.css">
-    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
-		
-    	<!-- Meta tags Obrigatórias -->
-    	<meta charset="utf-8">
-    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		
-		<!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">	
-
-    	<title>Agendar corrida ou aula</title>
-  	</head>
-    <body>
-      <script language="JavaScript">
-        function operacao(){
-            var a = eval(document.formed.t1.value);
-            var b = eval(document.formed.t2.value);
-            var c = a / b;
-            if (c = 1 ) {
-              alert("A média de tempo gasto por volta é de 1 minuto");
-            }
-            else{
-              alert("A média de tempo gasto por volta é de: " + c + "" + "minutos");
-            }
-        }
-    </script>    
+   <head>
+      <link rel = "icon" type = "image/jpg" href = "img/logo.png">
+      <link rel="stylesheet" type="text/css" href="estilo.css">
+      <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+      <!-- Meta tags Obrigatórias -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <title>Agendar corrida ou aula</title>
+   </head>
+   <body>
+      <script>
+         function entrar() {
+           window.open("home.html", "_self")
+         }
+         
+         function enviar() {
+         
+           var nome = document.getElementById("nome").value;
+           var email = document.getElementById("email").value;
+           var tel = document.getElementById("tel").value;
+         
+           if (nome === "" || email === "" || tel ==="" ) {
+             alert("Preencha os campos em branco!");
+           }
+           else {
+             alert("Mensagem enviada com sucesso!");
+           }
+         }
+      </script>
       <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-      
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
       <!--Menu-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="home.html">KartMV</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="home.html">Home </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="sobre.html">Sobre</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="servicos.html">Serviços</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Estatísticas
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="agenda.html">Agendar</a>
-                <a class="dropdown-item" href="media.html">Médias</a>
-                <a class="dropdown-item" href="requisitos.html">Requisitos</a>
-              </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="contato.html">Contato</a>
-              </li>
-          </ul>
-        </div>
-        </nav>
-
-        <!--Formulário-->
-        <form name="formed">
-          <center>
-              <h3>Cálculo em JavaScript</h3>
-              Digite o primeiro Número:<input type="number" name="t1" min="1">
-              <br><br>
-              Digite o segundo Número:<input type="number" name="t2" min="1">
-              <br><br><hr><br><br>
-              <input type="button" name="bt1" value="Calcular" onclick="operacao()">
-              <input type="reset" name="bt2" value="Limpar" onclick="document.formcalc.t1.focus()">
-          </center>
-  
-
-        
-    </body>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+         <a class="navbar-brand" href="home.html">KartMV</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+               <li class="nav-item">
+                  <a class="nav-link" href="home.html">Home </a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="sobre.html">Sobre</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="servicos.html">Serviços</a>
+               </li>
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Estatísticas
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                     <a class="dropdown-item" href="agenda.html">Agendar</a>
+                     <a class="dropdown-item" href="media.html">Médias</a>
+                     <a class="dropdown-item" href="requisitos.html">Requisitos</a>
+                  </div>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="contato.html">Contato</a>
+               </li>
+            </ul>
+         </div>
+      </nav>
+      <!--Formulário Bateria-->
+      <div class="formcont">
+      <p class="texto4">Agendar</p>
+      <p class="texto3">Agende sua Bateria!</p>
+      <p class="lead2">A KartMV oferece um sistema de agendamento fácil e flexível para que você possa reservar sua corrida de kart de forma conveniente. Por apenas R$ 20,00 reais por pessoa e R$ 1,00 real por minuto, você tem acesso à emoção da velocidade em nossa pista moderna e desafiadora.</p>
+      <p class="lead3">Após revisar todas as informações, enviaremos uma mensagem no seu E-mail para que você confirme sua reserva e efetue o pagamento de forma segura através dos métodos disponíveis. Nossa equipe dedicada e experiente estará pronta para recebê-lo e garantir uma experiência emocionante e segura em nossas pistas. Venha viver a emoção da velocidade na KartMV! Agende sua bateria hoje mesmo e prepare-se para momentos inesquecíveis de kartismo!</p>
+      <div id="div-form">
+         <form >
+            <p class="texto5">Seus Dados</p>
+            <div>
+               <label for="nome" class="formtxt">Digite seu Nome</label>
+               <input type="text" class="form-control" id="nome" name="nome" value="" required>
+            </div>
+            <div>
+               <label for="email" class="formtxt">Digite seu E-mail</label>
+               <input type="text" class="form-control" id="email" name="email" value="" required>
+            </div>
+            <div>
+               <label for="tel" class="formtxt">Digite seu Telefone</label>
+               <input type="text" class="form-control" id="tel" name="tel" value="" required>
+            </div>
+            <p class="texto5">Datas Disponíveis</p>
+            <label for="agenda" class="formtxt2">Escolha a Data</label>
+            <select name="dia">
+               <option value="">DIA</option>
+               <option value="">01</option>
+               <option value="">02</option>
+               <option value="">03</option>
+               <option value="">04</option>
+               <option value="">05</option>
+               <option value="">06</option>
+               <option value="">07</option>
+               <option value="">08</option>
+               <option value="">09</option>
+               <option value="">10</option>
+               <option value="">11</option>
+               <option value="">12</option>
+               <option value="">13</option>
+               <option value="">14</option>
+               <option value="">15</option>
+               <option value="">16</option>
+               <option value="">17</option>
+               <option value="">18</option>
+               <option value="">19</option>
+               <option value="">20</option>
+               <option value="">21</option>
+               <option value="">22</option>
+               <option value="">23</option>
+               <option value="">24</option>
+               <option value="">25</option>
+               <option value="">26</option>
+               <option value="">27</option>
+               <option value="">28</option>
+               <option value="">29</option>
+               <option value="">30</option>
+            </select>
+            <select name="mes">
+               <option value="">MÊS</option>
+               <option value="">Maio</option>
+               <option value="">Junho</option>
+               <option value="">Julho</option>
+               <option value="">Agosto</option>
+               <option value="">Setembro</option>
+               <option value="">Outubro</option>
+            </select>
+            <select name="hora">
+               <option value="">HORÁRIO</option>
+               <option value="">10:00</option>
+               <option value="">12:00</option>
+               <option value="">14:00</option>
+               <option value="">16:00</option>
+               <option value="">18:00</option>
+            </select>
+            <label for="agenda" class="formtxt2">Tempo da Bateria</label>
+            <select name="hora">
+               <option value="">TEMPO</option>
+               <option value="">30 Minutos</option>
+               <option value="">1 Hora</option>
+               <option value="">1 Hora e 30 Minutos</option>
+               <option value="">2 Horas</option>
+            </select>
+            <label for="agenda" class="formtxt2">Número de Pessoas</label>
+            <input type="number" class="form-control" id="tel" name="tel" max="20" min="1" value="" required>
+            <div>
+               <button type="button" class="btnE" onclick="enviar()">Agendar</button>
+            </div>
+            <div>
+               <input type="reset" name="limpa" value="Cancelar">
+            </div>
+         </form>
+      </div>
+      <!--Logo-->
+      <center>
+         <img class="icon2" src="img/icon1.png">
+      </center>
+      <!-- Formulário Aulas-->
+      <div class="formcont">
+      <p class="texto3">Agende sua Aula!</p>
+      <!--Tabela-->
+      <table id="customers">
+         <tr>
+            <th>Dia</th>
+            <th>Manhã</th>
+            <th>Tarde</th>
+            <th>Noite</th>
+         </tr>
+         <tr>
+            <td>Segunda Feira</td>
+            <td>9:00 - 10:00</td>
+            <td>13:00 - 14:00</td>
+            <td>19:00 - 20:00</td>
+         </tr>
+         <tr>
+            <td>Terça Feira</td>
+            <td>8:00 - 9:00</td>
+            <td>13:00 - 14:00</td>
+            <td>19:00 - 20:00</td>
+         </tr>
+         <tr>
+            <td>Quarta Feira</td>
+            <td>9:00 - 10:00</td>
+            <td>13:00 - 14:00</td>
+            <td>19:00 - 20:00</td>
+         </tr>
+         <tr>
+            <td>Quinta Feira</td>
+            <td>8:00 - 9:00</td>
+            <td>14:00 - 15:00</td>
+            <td>19:00 - 20:00</td>
+         </tr>
+         <tr>
+            <td>Sexta Feira</td>
+            <td>9:00 - 10:00</td>
+            <td>14:00 - 15:00</td>
+            <td>19:00 - 20:00</td>
+         </tr>
+      </table>
+      <div id="div-form">
+         <form >
+            <div>
+               <label for="nome" class="formtxt">Digite seu Nome</label>
+               <input type="text" class="form-control" id="nome" name="nome" value="" required>
+            </div>
+            <div>
+               <label for="email" class="formtxt">Digite seu E-mail</label>
+               <input type="text" class="form-control" id="email" name="email" value="" required>
+            </div>
+            <div>
+               <label for="tel" class="formtxt">Digite seu Telefone</label>
+               <input type="text" class="form-control" id="tel" name="tel" value="" required>
+            </div>
+            <label for="agenda" class="formtxt">Escolha a Data</label>
+            <select name="dia">
+               <option value="">DIA</option>
+               <option value="">Segunda Feira</option>
+               <option value="">Terça Feira</option>
+               <option value="">Quarta Feira</option>
+               <option value="">Quinta Feira</option>
+               <option value="">Sexta Feira</option>
+            </select>
+            <select name="hora">
+               <option value="">HORÁRIO</option>
+               <option value="">Manhã</option>
+               <option value="">Tarde</option>
+               <option value="">Noite</option>
+            </select>
+            <div>
+               <button type="button" class="btnE" onclick="enviar()">Enviar</button>
+            </div>
+            <div>
+               <input type="reset" name="limpa" value="Limpar">
+            </div>
+         </form>
+      </div>
+      <!--Rodapé-->
+      <footer>
+         <p>Marco Silva & Vinícius Silvério 2024 - &copyTodos os direitos reservados </p>
+         <p>Trabalho acadêmico - sem fins lucrativos</p>
+      </footer>
+   </body>
 </html>
