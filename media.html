@@ -14,17 +14,19 @@
    <body>
       <script language="JavaScript">
          function operacao(){
-             var am = eval(document.formed.t1.value);
-             var bs = eval(document.formed.t2.value);
-             var cv = eval(document.formed.t3.value);
+             var am = eval(document.formed.am.value);
+             var bs = eval(document.formed.bs.value);
+             var cv = eval(document.formed.cv.value);
              var as = am*60;
              var ts = as+bs;
              var res = ts/cv;
          
-             
-             
+             if (am === "" || bs === "" || cv === "") {
+               alert("Preencha os campos em branco!");
+             }
+             else {
                alert("A média de tempo gasto por volta é de " + res + " " + "segundos por volta");
-             
+             }
          }
       </script>  
       <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
@@ -64,17 +66,41 @@
             </ul>
          </div>
       </nav>
+      <p class="texto4">Velocidade</p>
+      <p class="texto3">Média de velocidade</p>
+      <p class="lead2">Quer saber como foi seu desempenho na pista? Então não perca tempo! Descubra qual foi sua média de tempo por volta na nossa calculadora logo abaixo. Primeiro insira o tempo total gasto na corrida e em seguida o número de voltas dadas. Assim, você poderá ter um controle melhor de seu desempenho! </p>
       <!--Formulário-->
+      <div id="div-form">
       <form name="formed">
+         <p class="texto5">Média por Volta</p>
+         <div>
+            <label for="am" class="formtxt">Minutos</label>
+            <input type="text" class="form-control" id="am" name="am" value="" required>
+         </div>
+         <div>
+            <label for="bs" class="formtxt">Segundos</label>
+            <input type="text" class="form-control" id="bs" name="bs" value="" required>
+         </div>
+         <div>
+            <label for="cv" class="formtxt">Número de Voltas</label>
+            <input type="text" class="form-control" id="cv" name="cv" value="" required>
+         </div>
+         <div>
+            <button type="button" class="btnE" onclick="operacao()">Calcular</button>
+         </div>
+         <div>
+            <input type="reset" name="limpa" value="Cancelar">
+         </div>
+      </form>
+      </div>
       <center>
-         <h3>Cálculo em JavaScript</h3>
-         Digite os minutos:<input type="text" name="t1" min="1">
-         <br><br>
-         Digite os segundos:<input type="text" name="t2" min="1">
-         <br><br>
-         Digite o número de voltas:<input type="text" name="t3" min="1">
-         <input type="button" name="bt1" value="Calcular" onclick="operacao()">
-         <input type="reset" name="bt2" value="Limpar" onclick="document.formcalc.t1.focus()">
+         <img class="icon2" src="img/icon1.png">
       </center>
+      <img class="lcp" src="img/lc.jpg">
+      <!--Rodapé-->
+      <footer>
+         <p>Marco Silva & Vinícius Silvério 2024 - &copyTodos os direitos reservados </p>
+         <p>Trabalho acadêmico - sem fins lucrativos</p>
+      </footer>
    </body>
 </html>
