@@ -13,22 +13,31 @@
    </head>
    <body>
       <script>
-         function entrar() {
-           window.open("home.html", "_self")
+         function precobat() {
+            var n1 = document.getElementById("n1").value;
+            var nome = document.getElementById("nome").value;
+            var email = document.getElementById("email").value;
+            var tel = document.getElementById("tel").value;
+            var precototal = n1*120;
+            
+            if (nome == "" || email == "" || tel ==="" || n1 === "" ) {
+               alert("Preencha os campos em branco");
+            }
+            else {
+               alert("O preço da Bateria agendada será de R$" + precototal + ",00 reais, enviaremos uma mensagem no seu E-mail para você confirmar o agendamento e efetuar o pagamento.");
+            }
          }
-         
-         function enviar() {
-         
-           var nome = document.getElementById("nome").value;
-           var email = document.getElementById("email").value;
-           var tel = document.getElementById("tel").value;
-         
-           if (nome === "" || email === "" || tel ==="" ) {
-             alert("Preencha os campos em branco!");
-           }
-           else {
-             alert("Mensagem enviada com sucesso!");
-           }
+         function precoaula() {
+            var nome2 = document.getElementById("nome2").value;
+            var email2 = document.getElementById("email2").value;
+            var tel2 = document.getElementById("tel2").value;
+            
+            if (nome2 === "" || email2 === "" || tel2 ==="") {
+               alert("Preencha os campos em branco");
+            }
+            else {
+               alert("O preço da Aula agendada será de R$50,00 reais, enviaremos uma mensagem no seu E-mail para você confirmar o agendamento e efetuar o pagamento.");
+            }
          }
       </script>
       <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
@@ -72,10 +81,10 @@
       <div class="formcont">
       <p class="texto4">Agendar</p>
       <p class="texto3">Agende sua Bateria!</p>
-      <p class="lead2">A KartMV oferece um sistema de agendamento fácil e flexível para que você possa reservar sua corrida de kart de forma conveniente. Por apenas R$ 20,00 reais por pessoa e R$ 1,00 real por minuto, você tem acesso à emoção da velocidade em nossa pista moderna e desafiadora.</p>
+      <p class="lead2">A KartMV oferece um sistema de agendamento fácil e flexível para que você possa reservar sua corrida de kart de forma conveniente. Por apenas R$ 120,00 reais por pessoa, você tem acesso à emoção da velocidade em nossa pista moderna e desafiadora.</p>
       <p class="lead3">Após revisar todas as informações, enviaremos uma mensagem no seu E-mail para que você confirme sua reserva e efetue o pagamento de forma segura através dos métodos disponíveis. Nossa equipe dedicada e experiente estará pronta para recebê-lo e garantir uma experiência emocionante e segura em nossas pistas. Venha viver a emoção da velocidade na KartMV! Agende sua bateria hoje mesmo e prepare-se para momentos inesquecíveis de kartismo!</p>
       <div id="div-form">
-         <form >
+         <form name="formalc">
             <p class="texto5">Seus Dados</p>
             <div>
                <label for="nome" class="formtxt">Digite seu Nome</label>
@@ -87,11 +96,11 @@
             </div>
             <div>
                <label for="tel" class="formtxt">Digite seu Telefone</label>
-               <input type="text" class="form-control" id="tel" name="tel" value="" required>
+               <input type="tel" class="form-control" id="tel" name="tel" value="" required maxlength="11">
             </div>
             <p class="texto5">Datas Disponíveis</p>
             <label for="agenda" class="formtxt2">Escolha a Data</label>
-            <select name="dia">
+            <select name="dia" val>
                <option value="">DIA</option>
                <option value="">01</option>
                <option value="">02</option>
@@ -142,17 +151,17 @@
                <option value="">18:00</option>
             </select>
             <label for="agenda" class="formtxt2">Tempo da Bateria</label>
-            <select name="hora">
+            <select name="tempo" id="tempo">
                <option value="">TEMPO</option>
-               <option value="">30 Minutos</option>
-               <option value="">1 Hora</option>
-               <option value="">1 Hora e 30 Minutos</option>
-               <option value="">2 Horas</option>
+               <option value="op1">30 Minutos</option>
+               <option value="op2">1 Hora</option>
+               <option value="op3">1 Hora e 30 Minutos</option>
+               <option value="op4">2 Horas</option>
             </select>
             <label for="agenda" class="formtxt2">Número de Pessoas</label>
-            <input type="number" class="form-control" id="tel" name="tel" max="20" min="1" value="" required>
+            <input type="number" class="form-control" id="n1" name="n1" max="20" min="1" value="" required>
             <div>
-               <button type="button" class="btnE" onclick="enviar()">Agendar</button>
+               <button type="button" class="btnE" name="bt1" value="bt1" onclick="precobat()">Agendar</button>
             </div>
             <div>
                <input type="reset" name="limpa" value="Cancelar">
@@ -166,6 +175,8 @@
       <!-- Formulário Aulas-->
       <div class="formcont">
       <p class="texto3">Agende sua Aula!</p>
+      <p class="lead2">Aprenda a pilotar com habilidade e emoção em nossas aulas de kart! Por apenas R$ 40 por aula, você terá acesso a instrutores experientes, equipamentos de qualidade e uma experiência educativa e divertida. Agende sua aula, encontre-se com nosso instrutor, aprenda técnicas avançadas e aprimore suas habilidades de pilotagem. Por que escolher a KartMV? Instrutores qualificados, abordagem personalizada e uma atmosfera de aprendizado envolvente.</p>
+      <p class="lead3">Após revisar todas as informações, enviaremos uma mensagem no seu E-mail para que você confirme sua reserva e efetue o pagamento de forma segura através dos métodos disponíveis. Nossa equipe dedicada e experiente estará pronta para recebê-lo e garantir uma experiência emocionante e segura em nossas pistas. Venha viver a emoção da velocidade na KartMV! Agende sua bateria hoje mesmo e prepare-se para momentos inesquecíveis de kartismo!</p>
       <!--Tabela-->
       <table id="customers">
          <tr>
@@ -208,19 +219,19 @@
       <div id="div-form">
          <form >
             <div>
-               <label for="nome" class="formtxt">Digite seu Nome</label>
-               <input type="text" class="form-control" id="nome" name="nome" value="" required>
+               <label for="nome2" class="formtxt">Digite seu Nome</label>
+               <input type="text" class="form-control" id="nome2" name="nome2" value="" required>
             </div>
             <div>
-               <label for="email" class="formtxt">Digite seu E-mail</label>
-               <input type="text" class="form-control" id="email" name="email" value="" required>
+               <label for="email2" class="formtxt">Digite seu E-mail</label>
+               <input type="text" class="form-control" id="email2" name="email2" value="" required>
             </div>
             <div>
-               <label for="tel" class="formtxt">Digite seu Telefone</label>
-               <input type="text" class="form-control" id="tel" name="tel" value="" required>
+               <label for="tel2" class="formtxt">Digite seu Telefone</label>
+               <input type="text" class="form-control" id="tel2" name="tel2" value="" required maxlength="11">
             </div>
             <label for="agenda" class="formtxt">Escolha a Data</label>
-            <select name="dia">
+            <select name="dia2">
                <option value="">DIA</option>
                <option value="">Segunda Feira</option>
                <option value="">Terça Feira</option>
@@ -228,20 +239,21 @@
                <option value="">Quinta Feira</option>
                <option value="">Sexta Feira</option>
             </select>
-            <select name="hora">
+            <select name="tempo2">
                <option value="">HORÁRIO</option>
                <option value="">Manhã</option>
                <option value="">Tarde</option>
                <option value="">Noite</option>
             </select>
             <div>
-               <button type="button" class="btnE" onclick="enviar()">Enviar</button>
+               <button type="button" class="btnE" onclick="precoaula()">Agendar</button>
             </div>
             <div>
-               <input type="reset" name="limpa" value="Limpar">
+               <input type="reset" name="limpa" value="Cancelar">
             </div>
          </form>
       </div>
+      <img class="lc" src="img/lc.jpg">
       <!--Rodapé-->
       <footer>
          <p>Marco Silva & Vinícius Silvério 2024 - &copyTodos os direitos reservados </p>
